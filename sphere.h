@@ -13,6 +13,7 @@ public:
 	sphere(vec3 cen, double r) :center(cen), radius(r) {};
 	sphere(vec3 cen, double r, lambertian *mat_ptr) :center(cen), radius(r), mat_pt(mat_ptr) {};
 	sphere(vec3 cen, double r, metal *mat_ptr) :center(cen), radius(r) , mat_pt(mat_ptr) {};
+	sphere(vec3 cen, double r, dielectric *mat_ptr) :center(cen), radius(r), mat_pt(mat_ptr) {};
 	virtual bool hit(const ray& r, double tmin, double tmax, hit_record& rec) const;
 
 };
